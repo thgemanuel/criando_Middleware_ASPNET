@@ -20,6 +20,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//app.UseMiddleware<MeuMiddleware>();
+app.UseMeuMiddleware();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
